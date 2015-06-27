@@ -9,10 +9,7 @@ $(document).ready(function() {
 // format it into a table to add to the page
     function parseData(data) {
         disableState();
-        var html = '';
-        $('#results-area').html('');
-        console.log("I am in ParseData");
-        console.log("first element is: " + data[0] + data[0].name);
+        $('#results-area').html(''); 
         var myAppendTable = "<table class='table table-bordered table-striped' style='max-width:700px;'>";
     
         // loop through the analyzed speakers
@@ -23,7 +20,6 @@ $(document).ready(function() {
                 m = (data[i].matchedwords * 100).toFixed(2);
                 console.log("n =" + n + "s = " + s + "m = " + m);
             
-        
                 // add html table to main page
                 myAppendTable += "<tr style='border:2px solid black;'><td colspan='2' style='border-bottom:1px solid black;'>" + n 
                         + "</td></tr><tr><td><table style='background:none; width:100%;'><tr style='border-bottom:1px solid black;'>"
@@ -66,5 +62,3 @@ $(document).ready(function() {
     }
     
 });
-
-    

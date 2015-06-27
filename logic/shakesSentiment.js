@@ -58,11 +58,12 @@ module.exports = function(respText, callback) {
     for (i = 0; i < speakersSorted.length; i++) {
         var tempWords = sentiment(speakersSorted[i].lines)['words'];
         var tempString = "";
+        // turns words array returned by sentiment into a comma separated string
         for (j = 0; j < tempWords.length; j++)
         {
             tempString += tempWords[j] + ", ";
         }
-        speakersSorted[i].words = S(tempString).chompRight(', ').s;
+        speakersSorted[i].words = S(tempString).chompRight(', ').s; // removes final comma
         speakersSorted[i].sentiment = sentiment(speakersSorted[i].lines)['score'] / sentiment(speakersSorted[i].lines)['words'].length;
         speakersSorted[i].matchedwords = sentiment(speakersSorted[i].lines)['words'].length / speakersSorted[i].lines.split(' ').length;
     }
