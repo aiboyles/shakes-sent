@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        title= title
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='')
+        meta(name='author', content='Ann Boyles')
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/stylesheets/style.css', rel='stylesheet')
+    body
+        .container
+            .row
+                .col-xs-18.col-md-12
+                    h1 Shakespeare Sentiment Analysis
+            .row
+                .col-xs-18.col-md-12
+                    .button-area
+                        .row
+                            .col-xs-6.col-md-4
+                                h4 Comedy
+                                    br
+                                    .btn-group-vertical
+                                    button#analyze.btn.btn-success.btn-block(name="muchadoaboutnothing") Much Ado About Nothing
+                                    button#analyze.btn.btn-success.btn-block(name="twelfthnight") Twelfth Night
+                                    button#analyze.btn.btn-success.btn-block(name="amidsummernightsdream") A Midsummer Night's Dream
+                            .col-xs-6.col-md-4
+                                h4 Tragedy
+                                    br
+                                    .btn-group-vertical
+                                    button#analyze.btn.btn-success.btn-block(name="hamlet") Hamlet
+                                    button#analyze.btn.btn-success.btn-block(name="macbeth") Macbeth
+                                    button#analyze.btn.btn-success.btn-block(name="romeoandjuliet") Romeo and Juliet
+                                    button#analyze.btn.btn-success.btn-block(name="othello") Othello
+                            .col-xs-6.col-md-4
+                                h4 History
+                                    br
+                                    .btn-group-vertical
+                                    button#analyze.btn.btn-success.btn-block(name="henryv") Henry V
+                                    button#analyze.btn.btn-success.btn-block(name="richardii") Richard II
+                                    button#analyze.btn.btn-success.btn-block(name="richardiii") Richard III
+            .row
+                .col-xs-18.col-md-12 
+                    .results-container
+                    #results-area
+    
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(src='javascripts/main.js')
